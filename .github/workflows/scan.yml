@@ -8,6 +8,9 @@ jobs:
   scan:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write   # 🔥 REQUIRED
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -22,12 +25,13 @@ jobs:
       - name: Create reports folder
         run: mkdir -p reports
 
-      - name: Run Trivy Scan (Clean JSON)
+      - name: Run Trivy Scan
         run: |
           trivy fs . --format json --output reports/trivy.json
 
-      - name: Verify file
+      - name: Check file content
         run: |
+          echo "==== FILE CONTENT ===="
           cat reports/trivy.json | head -n 20
 
       - name: Commit report
