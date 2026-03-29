@@ -3,16 +3,16 @@
   "Trivy": {
     "Version": "0.69.3"
   },
-  "ReportID": "019d3ad0-4bc4-7d8a-85e6-c458409788b5",
-  "CreatedAt": "2026-03-29T18:17:02.660888341Z",
-  "ArtifactID": "sha256:28e958d04554f3c92318669b092fbe4d0eb973ec13997ea50be171164df06cab",
+  "ReportID": "019d3ba4-0d63-7820-8c90-dc97bc4c2e84",
+  "CreatedAt": "2026-03-29T22:08:20.323533825Z",
+  "ArtifactID": "sha256:09271d948dc86dc9a22229c1c2450d781b589982154c3ff2aec7602687249c50",
   "ArtifactName": ".",
   "ArtifactType": "repository",
   "Metadata": {
     "RepoURL": "https://github.com/shravanychandhanaa/devsecops-monitoring",
     "Branch": "main",
-    "Commit": "0b9e7462ebb2e4bad5046e70da45a299fbd825ba",
-    "CommitMsg": "Update app.py",
+    "Commit": "216b58f71a4e6283dc9be07e0776a4fed9ec263b",
+    "CommitMsg": "Initialize README with project details\n\nAdded project overview, problem statement, objectives, architecture, tools, workflow, features, and dashboard panels to README.",
     "Author": "shravanychandhanaa \u003cshravanychandhanaa28@gmail.com\u003e",
     "Committer": "GitHub \u003cnoreply@github.com\u003e"
   }
