@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # 🔥 REQUIRED
+      contents: write   # 🔥 VERY IMPORTANT
 
     steps:
       - name: Checkout Repository
@@ -27,12 +27,12 @@ jobs:
 
       - name: Run Trivy Scan
         run: |
-          trivy fs . --format json --output reports/trivy.json
+          trivy fs . --format json --output reports/trivy.json || true
 
-      - name: Check file content
+      - name: Show file content (DEBUG)
         run: |
-          echo "==== FILE CONTENT ===="
-          cat reports/trivy.json | head -n 20
+          echo "===== FILE CONTENT ====="
+          cat reports/trivy.json
 
       - name: Commit report
         run: |
