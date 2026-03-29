@@ -3,15 +3,15 @@
   "Trivy": {
     "Version": "0.69.3"
   },
-  "ReportID": "019d3a11-dfe2-7bdc-ae05-05a9f6885577",
-  "CreatedAt": "2026-03-29T14:49:03.202778301Z",
-  "ArtifactID": "sha256:141975f8032e9899b50d83d349bdde587335829e13fdcd3e6c819449b39ef9fc",
+  "ReportID": "019d3a16-7d8f-741a-ab72-fc1c8c959758",
+  "CreatedAt": "2026-03-29T14:54:05.711269736Z",
+  "ArtifactID": "sha256:bc0f6e3ed67d691a87dc30a9cf1e67c7c5670751915a5a60655cc2e508ff4d05",
   "ArtifactName": ".",
   "ArtifactType": "repository",
   "Metadata": {
     "RepoURL": "https://github.com/shravanychandhanaa/devsecops-monitoring",
     "Branch": "main",
-    "Commit": "ae00ab05b52a5f429978eda9f6693c97ac557197",
+    "Commit": "e0b2e04630b93bc8ebb55e4fde4a805c713dd559",
     "CommitMsg": "Update app.py",
     "Author": "shravanychandhanaa \u003cshravanychandhanaa28@gmail.com\u003e",
     "Committer": "GitHub \u003cnoreply@github.com\u003e"
