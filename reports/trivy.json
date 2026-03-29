@@ -3,16 +3,16 @@
   "Trivy": {
     "Version": "0.69.3"
   },
-  "ReportID": "019d39bf-3c59-7b57-9d50-6b2bdbd7aca1",
-  "CreatedAt": "2026-03-29T13:18:47.385744442Z",
-  "ArtifactID": "sha256:e39833fd91dce3c3003d16e5dd43edb3d7152fd5d206dcbbf629b526b886de4e",
+  "ReportID": "019d3a11-dfe2-7bdc-ae05-05a9f6885577",
+  "CreatedAt": "2026-03-29T14:49:03.202778301Z",
+  "ArtifactID": "sha256:141975f8032e9899b50d83d349bdde587335829e13fdcd3e6c819449b39ef9fc",
   "ArtifactName": ".",
   "ArtifactType": "repository",
   "Metadata": {
     "RepoURL": "https://github.com/shravanychandhanaa/devsecops-monitoring",
     "Branch": "main",
-    "Commit": "c17e2316f2b3899dfeda3f7cb4d5d741c7de0419",
-    "CommitMsg": "Implement TEST_MODE for metrics endpoint\n\nAdded TEST_MODE for toggling between test and real data in metrics endpoint.",
+    "Commit": "ae00ab05b52a5f429978eda9f6693c97ac557197",
+    "CommitMsg": "Update app.py",
     "Author": "shravanychandhanaa \u003cshravanychandhanaa28@gmail.com\u003e",
     "Committer": "GitHub \u003cnoreply@github.com\u003e"
   }
