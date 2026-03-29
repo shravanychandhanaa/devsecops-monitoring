@@ -15,12 +15,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # ✅ ADD HERE (before scan)
       - name: Create reports folder
         run: mkdir -p reports
 
       - name: Run Trivy Scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
           format: 'json'
