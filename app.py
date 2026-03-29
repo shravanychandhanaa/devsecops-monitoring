@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/reports/trivy.json"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/shravanychandhanaa/devsecops-monitoring/main/reports/trivy.json"
 
 def get_vulnerability_counts():
     try:
