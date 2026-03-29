@@ -2,27 +2,38 @@ name: Security Scan
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   scan:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Run Trivy Scan
-      uses: aquasecurity/trivy-action@master
-      with:
-        scan-type: 'fs'
-        format: 'json'
-        output: 'reports/trivy.json'
+      - name: Install Trivy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.50.1_Linux-64bit.deb
+          sudo dpkg -i trivy_0.50.1_Linux-64bit.deb
 
-    - name: Commit report
-      run: |
-        git config user.name "github-actions"
-        git config user.email "actions@github.com"
-        git add reports/trivy.json
-        git commit -m "Update scan report" || echo "No changes"
-        git push
+      - name: Create reports folder
+        run: mkdir -p reports
+
+      - name: Run Trivy Scan (Clean JSON)
+        run: |
+          trivy fs . --format json --output reports/trivy.json
+
+      - name: Verify file
+        run: |
+          cat reports/trivy.json | head -n 20
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add reports/trivy.json
+          git commit -m "Update scan report" || echo "No changes"
+          git push
