@@ -40,9 +40,9 @@ def metrics():
     # 🧪 TEST DATA (for Grafana Pie Chart)
     if TEST_MODE:
         return jsonify({
-            "critical": random.randint(1, 10),
-            "high": random.randint(5, 15),
-            "medium": random.randint(10, 20)
+            "critical": 3,
+            "high": 6,
+            "medium": 9
         })
 
     # 🔴 REAL DATA
